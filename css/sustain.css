@@ -77,20 +77,25 @@ main article img {
 
 main section {
     container: flex;
+    justify-content: space-between; 
+    gap: 20px
     }
     
     
     
 main section div {
+    flex: 1; 
+    max-width: 300px;
     background-color: #e7f7e7;
     border: 1px solid #008000;
     border-radius: 10px;
     text-align: center;
+    margin-right: 1rem;
     }
     
     
     
-main section dic {
+section div h2 {
     background-color: #008000;
     color: white;
     border-radius: 10px 10px 0 0;
@@ -100,9 +105,59 @@ main section dic {
     
  
     
-section div img {
+main section div {
     border: 3px double #333;
     display: block;
     margin: 0 auto;
     width: 90%;
     }
+
+
+/* Sidebar */
+aside section {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border: 1px solid #008000;
+}
+
+aside h3 {
+    background-color: #008000;
+    color: white;
+    padding: .5rem;
+    margin:0;
+}
+
+aside a {
+    display: inline-block;
+    padding: .5rem;
+}
+
+/* Home Page Columns */
+#content-wrapper {
+    display: flex;
+}
+
+#content-wrapper aside {
+    background-color: #ccc;
+    margin-right: 1rem;
+    padding: .5rem;
+    position: relative;
+    top: 20px;
+    flex: 1;
+    order: 0;
+}
+
+main aside section h3 {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+#content-wrapper main {
+    flex: 4;
+    order: 1;
+}
+
+
+section div:last-child {
+    margin-right: 0;
+}
